@@ -1,5 +1,4 @@
 data = (fs.readFileSync("input.txt")+"").split("\n").filter(a=>a).map(a=>a.split(": ")[1].split(" | ").map(a=>a.split(" ").filter(a=>a).map(Number)));
-sum(data.map(a=>a[0].filter(b=>a[1].includes(b)).length).map(a=>Math.floor(2**(a-1))));
 console.log("Part 1:",sum(data.map(a=>a[0].filter(b=>a[1].includes(b)).length).map(a=>Math.floor(2**(a-1)))));
 
 matches = data.map(a=>a[0].filter(b=>a[1].includes(b)).length);
